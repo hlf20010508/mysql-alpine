@@ -25,7 +25,7 @@ sudo docker image prune -a --force
 ```sh
 git clone https://github.com/hlf20010508/mysql-alpine-ds.git
 cd mysql-alpine-ds
-sudo docker build -f Dockerfile -t user/mysql .
+sudo docker build -f Dockerfile -t mysql .
 ```
 
 ## Link
