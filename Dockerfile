@@ -114,8 +114,7 @@ RUN set -eux; \
 	mysqlsh --version
 
 COPY docker-entrypoint.sh /usr/local/bin/
-RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
-ENTRYPOINT ["bash /docker-entrypoint.sh"]
+ENTRYPOINT ["bash /usr/local/bin/docker-entrypoint.sh"]
 
 EXPOSE 3306 33060
 CMD ["mysqld"]
