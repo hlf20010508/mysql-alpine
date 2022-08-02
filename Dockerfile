@@ -1,6 +1,6 @@
 FROM alpine:3.15.5
 RUN apk update
-RUN apk add --no-cache mysql mysql-client
+RUN apk add --no-cache openrc mysql mysql-client
 RUN mysql_install_db --user=mysql --datadir=/var/lib/mysql
 RUN rc-service mariadb start
 RUN mysqladmin -u root password "1486922887"
