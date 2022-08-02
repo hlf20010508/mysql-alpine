@@ -1,5 +1,5 @@
 # mysql-alpine
-> A mysql image, store data in container
+> A mysql alpine image, store data in container
 
 ## Image contains
 - Alpine
@@ -23,7 +23,9 @@ sudo docker image prune -a --force
 
 ## build image
 ```sh
-sudo docker build -f Dockerfile -t hlf01/mysql .
+git clone https://github.com/hlf20010508/mysql-alpine.git
+cd mysql-alpine
+sudo docker build -f Dockerfile -t user/mysql .
 ```
 
 ## Link
