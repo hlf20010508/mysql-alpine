@@ -114,7 +114,5 @@ RUN set -eux; \
 	mysqlsh --version
 
 COPY docker-entrypoint.sh /usr/local/bin/
-ENTRYPOINT ["bash /usr/local/bin/docker-entrypoint.sh"]
 
 EXPOSE 3306 33060
-CMD ["mysqld"]
