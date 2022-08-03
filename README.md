@@ -5,9 +5,11 @@
 - Alpine 3.15.5
 - MySQL 10.6.8-MariaDB
 
-Compressed size 56MB
+## Size
+Compressed 56MB
+Total 191MB
 
-## launch through docker
+## Launch through docker
 Data stored in container  
 Please provide `your root password`
 ```sh
@@ -25,18 +27,18 @@ Or use auto volumn. Please provide `your root password`
 docker run -v /var/lib/mysql --name mysql -e MYSQL_ROOT_PASSWD="your root password" -p 3306:3306 --restart always -d hlf01/mysql-alpine
 ```
 
-## save new data to image, and push to docker hub
+## Save new data to image, and push to docker hub
 If your data stored in container, you can add your new data to image and upload it to docker hub
 ```sh
 sudo docker commit mysql user/repo
 sudo docker push user/repo
 ```
 
-## build image
+## Build image
 ```sh
 git clone https://github.com/hlf20010508/mysql-alpine.git
 cd mysql-alpine
-sudo docker build -f Dockerfile -t mysql .
+sudo docker build -f Dockerfile -t mysql --no-cache .
 ```
 
 ## Link
