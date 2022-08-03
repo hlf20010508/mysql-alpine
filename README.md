@@ -8,21 +8,20 @@
 Compressed size 56MB
 
 ## launch through docker
+Data stored in container  
 Please provide `your root password`
 ```sh
-# data stored in container
 sudo docker run --name mysql -e MYSQL_ROOT_PASSWD="your root password" -p 3306:3306 --restart always -d hlf01/mysql-alpine
 ```
 
+Data stored locally  
 Use specified volumn. Please provide `YOUR_ABSOLUTE_PATH` and `your root password`
 ```sh
-# data stored locally
 docker run -v YOUR_ABSOLUTE_PATH:/var/lib/mysql --name mysql -e MYSQL_ROOT_PASSWD="your root password" -p 3306:3306 --restart always -d hlf01/mysql-alpine
 ```
 
 Or use auto volumn. Please provide `your root password`
 ```sh
-# data stored locally
 docker run -v /var/lib/mysql --name mysql -e MYSQL_ROOT_PASSWD="your root password" -p 3306:3306 --restart always -d hlf01/mysql-alpine
 ```
 
