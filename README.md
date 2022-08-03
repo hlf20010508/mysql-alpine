@@ -5,9 +5,7 @@
 - Alpine 3.15.5
 - MySQL 10.6.8-MariaDB
 
-## Size
-- Compressed 56.99MB
-- Total 310MB
+Compressed size 56MB
 
 ## launch through docker
 Please provide `your root password`
