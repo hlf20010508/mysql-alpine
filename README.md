@@ -6,8 +6,8 @@
 - MySQL 10.6.8-MariaDB
 
 ## Size
-Compressed 56MB
-Total 191MB
+- Compressed 56MB
+- Total 191MB
 
 ## Launch through docker
 Data stored in container  
