@@ -1,5 +1,5 @@
-# mysql-alpine-ds
-> A mysql alpine image, data stored in container
+# mysql-alpine
+> A mysql alpine image
 
 ## Image contains
 - Alpine 3.15.5
@@ -10,23 +10,37 @@
 - Total 310MB
 
 ## launch through docker
+Please provide `your root password`
 ```sh
-sudo docker run --name mysql -e MYSQL_ROOT_PASSWD="your root password" -p 3306:3306 --restart always -d hlf01/mysql-alpine-ds
+# data stored in container
+sudo docker run --name mysql -e MYSQL_ROOT_PASSWD="your root password" -p 3306:3306 --restart always -d hlf01/mysql-alpine
+```
+
+Use specified volumn. Please provide `YOUR_ABSOLUTE_PATH` and `your root password`
+```sh
+# data stored locally
+docker run -v YOUR_ABSOLUTE_PATH:/var/lib/mysql --name mysql -e MYSQL_ROOT_PASSWD="your root password" -p 3306:3306 --restart always -d hlf01/mysql-alpine
+```
+
+Or use auto volumn. Please provide `your root password`
+```sh
+# data stored locally
+docker run -v /var/lib/mysql --name mysql -e MYSQL_ROOT_PASSWD="your root password" -p 3306:3306 --restart always -d hlf01/mysql-alpine
 ```
 
 ## save new data to image, and push to docker hub
+If your data stored in container, you can add your new data to image and upload it to docker hub
 ```sh
 sudo docker commit mysql user/repo
 sudo docker push user/repo
-sudo docker image prune -a --force
 ```
 
 ## build image
 ```sh
-git clone https://github.com/hlf20010508/mysql-alpine-ds.git
-cd mysql-alpine-ds
+git clone https://github.com/hlf20010508/mysql-alpine.git
+cd mysql-alpine
 sudo docker build -f Dockerfile -t mysql .
 ```
 
 ## Link
-[Docker Hub](https://hub.docker.com/repository/docker/hlf01/mysql-alpine-ds)
+[Docker Hub](https://hub.docker.com/repository/docker/hlf01/mysql-alpine)
