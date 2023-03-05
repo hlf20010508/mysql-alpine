@@ -1,7 +1,7 @@
-FROM alpine:3.15.5
-# RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+FROM alpine:3.7
+
 RUN apk update && \
-    apk add --no-cache mysql=10.6.8-r0 mysql-client=10.6.8-r0 netcat-openbsd=1.130-r3
+    apk add --no-cache mysql mysql-client netcat-openbsd
 
 EXPOSE 3306
 
