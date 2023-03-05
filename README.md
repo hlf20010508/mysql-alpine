@@ -2,12 +2,8 @@
 > A mysql alpine image
 
 ## Image contains
-- Alpine 3.15.5
-- MySQL 10.6.8-MariaDB
-
-## Size
-- Compressed 56MB
-- Total 191MB
+- Alpine 3.17
+- MySQL MariaDB
 
 ## Launch through docker
 Data stored in container  
